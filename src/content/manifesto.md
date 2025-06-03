@@ -48,4 +48,4 @@ Nos nutrimos del suelo común del conocimiento compartido.
 
 **Bienvenidx al portal. Ya has sembrado tu primera semilla.**
 
-*fundacion@enraiza.cl · github.com/fundacion-enraiza*
+*fundacion@enraiza.cl · github.com/enraiza369*
