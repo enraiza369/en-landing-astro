@@ -1,22 +1,27 @@
 ---
-import AnimationLoader from '../components/ClientAnimationLoader.astro';
+import Navbar from '../components/Navbar.astro';
+import InitClient from '../components/InitClient.jsx';
+import '../styles/main.scss'; // Import directo, no necesita style tag
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portal RAÍZ</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
   </head>
-  <body>
-    <AnimationLoader />
-    <slot />
-  </body>
-</html>
 
-<style global lang="scss">
-  @import '../styles/main.scss';
-</style>
+  <body>
+    <Navbar />
+    <InitClient client:only="react" />
+
+    <main class="container-fluid px-0">
+      <slot />
+    </main>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" defer></script>
+
+</html>

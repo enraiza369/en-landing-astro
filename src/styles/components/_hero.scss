@@ -1,0 +1,42 @@
+@use '../variables' as vars;
+
+.hero {
+  background: radial-gradient(circle at center, vars.$secondary, vars.$primary, vars.$dark);
+  padding: 3rem 1rem;
+  text-align: center;
+  color: white;
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  // Tablet y escritorio
+  @media (min-width: 768px) {
+    padding: 6rem 2rem;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+
+    .btn {
+      font-size: 1.1rem;
+    }
+  }
+}

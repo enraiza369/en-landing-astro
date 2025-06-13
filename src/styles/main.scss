@@ -1,28 +1,62 @@
-// src/styles/main.scss
-
 // Bootstrap base
-@use "bootstrap/scss/bootstrap";
 
-// Tus estilos personalizados
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f5f5f2;
-  color: #222;
-  margin: 0;
-  padding: 0;
+@use 'variables' as *;
+
+@use 'bootstrap/scss/bootstrap' with (
+  $primary: $primary,
+  $secondary: $secondary,
+  $warning: $warning,
+  $dark: $dark,
+  $light: $light,
+  $font-family-base: $font-family-base
+);
+
+// ✅ Componentes visuales
+@use 'components/navbar';
+@use 'components/hero';
+
+// 🌍 Ajustes globales Enraiza
+html {
+  scroll-behavior: smooth;
+  font-size: 100%; // base 16px
+
+  @media (max-width: 480px) {
+    font-size: 93.75%; // 15px
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 112.5%; // 18px
+  }
 }
 
-.hero {
-  padding: 5rem 2rem;
-  text-align: center;
-  background: linear-gradient(to bottom, #eaf8e1, #fdfdfc);
+body {
+  background-color: $light;
+  color: $dark;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-base;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-  p {
-    font-size: 1.25rem;
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: $primary;
   }
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
 }

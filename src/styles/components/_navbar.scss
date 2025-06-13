@@ -1,0 +1,47 @@
+@use '../variables' as vars;
+
+.navbar {
+  background: vars.$dark;
+  padding: 0.5rem 1rem;
+
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: vars.$primary;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+      height: 28px;
+      width: auto;
+    }
+  }
+
+  .nav-link {
+    color: vars.$light !important;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      color: vars.$primary !important;
+    }
+  }
+
+  // Ajustes para pantallas medianas y mayores
+  @media (min-width: 768px) {
+    .navbar-brand {
+      font-size: 1.25rem;
+
+      img {
+        height: 32px;
+      }
+    }
+
+    .nav-link {
+      font-size: 1rem;
+    }
+  }
+}
+
+
