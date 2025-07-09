@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { initAnimations } from '../scripts/init.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 export default function InitClient() {
   useEffect(() => {

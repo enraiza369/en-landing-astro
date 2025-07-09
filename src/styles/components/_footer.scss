@@ -1,0 +1,20 @@
+@use '../variables' as vars;
+
+.footer {
+    background-color: vars.$light;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 0.9rem;
+  
+    a {
+      text-decoration: none;
+      &:hover {
+        color: vars.$primary;
+      }
+    }
+  
+    .bi {
+      font-size: 1rem;
+      vertical-align: middle;
+    }
+  }
+  
